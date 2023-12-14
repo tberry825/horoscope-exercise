@@ -68,17 +68,13 @@ function Home({ dataProps }) {
 
   // The code uses the Date object to work with dates.
   //The findZodiacSign function iterates through the astrological signs, compares the current date with the date range of each sign, and determines the current zodiac sign.
-  function findZodiacSign() {
-
-
-
-
+  function findZodiacSign(date) {
     const currentZodiacSign = data.find((sign) => {
       const dateRange = sign.dateRange.split("-")
       const startDate = new Date(dateRange[0] + " " + currentDate.getFullYear());
       const endDate = new Date(dateRange[1] + " " + currentDate.getFullYear());
 
-      if (currentDate >= startDate && currentDate <= endDate) {
+      if (date >= startDate && date <= endDate) {
         return true;
       }
       return false;
@@ -86,11 +82,11 @@ function Home({ dataProps }) {
 
     return currentZodiacSign.sign;
   }
-  const sign = findZodiacSign()
+  // const sign = findZodiacSign()
 
   function handleClick() {
     setShowInfo(!showInfo);
-    findZodiacSign();
+    setCurrentSign(findZodiacSign(currentDate));
   }
   // This line uses the setModalVisible function, which is likely a state updater function associated with a state variable named modalVisible. Setting modalVisible to false means that the modal should no longer be visible, effectively closing it.
   //This line uses the setSelectedSign function, which is likely a state updater function associated with a state variable named selectedSign. Setting selectedSign to null clears the selected sign, indicating that no specific sign is currently selected.
@@ -139,7 +135,7 @@ function Home({ dataProps }) {
           <DateComponent
             handleClick={handleClick}
             showInfo={showInfo}
-            currentSign={sign}
+            currentSign={currentSign}
           />
           <h3>Would you like to choose an astrological sign?</h3>
           <button className="yesButton" onClick={handleYesButtonClick}>
