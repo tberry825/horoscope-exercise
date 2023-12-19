@@ -79,6 +79,7 @@ function Home({ dataProps }) {
       }
       return false;
     });
+    console.log((currentZodiacSign))
 
     return currentZodiacSign.sign;
   }
@@ -104,17 +105,17 @@ function Home({ dataProps }) {
   //The HoroscopePicker component is rendered when the "Yes" button is clicked (yesButtonClick is true).
   //Information about the selected astrological sign is displayed when a sign is selected.
   return (
-    <div className="home">
-      <button onClick={handleButtonClick}>
+    <div className="home" >
+      <button className="startHide" onClick={handleButtonClick}>
         {buttonClicked ? "Hide" : "Start"}
       </button>
       {buttonClicked ? (
         <>
 
-          <h2>Learn about your horoscope!</h2>
-        {/* This form allows users to input their birthdate, submit the form, and see their astrological sign displayed on the page. The astrological sign is determined and displayed dynamically based on the user's input.   */}
+          <div className="sentenceWrapper"><h1 className="learnSentence">Learn about your horoscope!</h1></div>
+          {/* This form allows users to input their birthdate, submit the form, and see their astrological sign displayed on the page. The astrological sign is determined and displayed dynamically based on the user's input.   */}
           <div className="formContainer">
-            <form onSubmit={handleSubmit}>
+            <form className="formWrapper" onSubmit={handleSubmit}>
               <label>What is your birthday?</label>
               <br />
               <input
@@ -124,10 +125,10 @@ function Home({ dataProps }) {
                 onChange={handleInputChange}
               ></input>
               <br />
-              <button type="submit">Submit</button>
+              <button className="submitForm" type="submit">Submit</button>
               {personalSign ? (
                 <div>
-                  <p>Your sign is: {personalSign}</p>
+                  <p className="signSentence">Your sign is: {personalSign}</p>
                 </div>
               ) : null}
             </form>
@@ -137,7 +138,9 @@ function Home({ dataProps }) {
             showInfo={showInfo}
             currentSign={currentSign}
           />
-          <h3>Would you like to choose an astrological sign?</h3>
+          <div className="sentenceWrapper">
+            <h3 className="chooseSentence">Would you like to choose an astrological sign?</h3>
+          </div>
           <button className="yesButton" onClick={handleYesButtonClick}>
             Yes, Please!
           </button>

@@ -1,4 +1,4 @@
-
+/* Home */
 .home {
   margin-top: 3em;
   text-align: center;
@@ -8,17 +8,20 @@ button.yesButton, button.noButton  {
   margin-right: 2em;
   margin-left: 2em;
   padding: 2em;
-  border: solid black 2px;
-  background-color: transparent;
+  border: solid purple 2px;
+  border-radius: 5px;
   margin-bottom: 2em;
+  background-color: #a09cd6;
+  color: purple;
 }
 
 .signContainer  {
   display: flex;
   justify-content: center;
   margin: 2em auto;
-  border: solid black 2px;
-  background-color: transparent;
+  border: solid #a09cd6 2px;
+  border-radius: 10px;
+  background-color: #44104b;
   padding: 2em;
   width: 50%;
 }
@@ -29,10 +32,13 @@ button.yesButton, button.noButton  {
   margin-left: 3em;
   margin-right: 3em;
   margin-bottom: 1em;
-  background-color: transparent;
+  background-color: #a09cd6;
   padding: 2em;
   height: 100px;
   width: 130px;
+  color: purple;
+  border: #a09cd6;
+  border-radius: 10px;
 }
 
 .selectedSign {
@@ -45,7 +51,116 @@ button.yesButton, button.noButton  {
   width: 20%;
 }
 
+
+.startHide {
+  color: purple;
+  background-color: #a09cd6;
+  border: solid purple ;
+  border-radius: 5px;
+  font-style: bolder;
+  margin-top: 20px;
+}
+
+.learnSentence, .chooseSentence {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+
+.sentenceWrapper {
+  margin: auto;
+  background-color: #44104b;
+  width: 50%;
+}
+
+/* DateComponent */
+
+.dateComponent {
+  background-color: #a09cd6;
+  width: 19%;
+  margin: auto;
+}
+
+.dateShowHide {
+  color: #44104b !important;
+ 
+}
+
+button {
+  color: #44104b;
+  border: #44104b !important;
+  border-radius: 10px !important;
+}
+
+p .todaySentence, .currentSentence {
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: #44104b;
+  margin-top: 10px;
+ 
+}
+
+p {
+  padding-top: 15px;
+  margin-bottom: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+/* Form */
+.formWrapper {
+  background-color: #44104b;
+  color: #a09cd6;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 30%;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+label {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  color: #a09cd6;
+  font-weight: bolder;
+}
+
+input {
+  color: #a09cd6;
+  margin-bottom: 8px;
+}
+
+.submitForm {
+  color: purple;
+  background-color: #a09cd6;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.signSentence {
+  font-size: medium;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-weight: bolder;
+  color: #a09cd6;
+}
+
 /* Modal CSS */
 .modalTitle {
-  color:green;
+  color:#44104b;
+}
+
+.closeButton {
+  background-color: purple;
+  color: #a09cd6;
+}
+
+.closeButton {
+  background-color: #44104b !important; 
+  color: #a09cd6 !important;
+  border: #a09cd6 !important;
 }
